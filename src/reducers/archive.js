@@ -4,7 +4,7 @@ const INITIAL_STATE = [];
 
 const applyArchiveStory = (state, action) => [ ...state, action.id ];
 
-function archiveReducer(state=INITIAL_STATE, action) {
+function archiveReducer(state = INITIAL_STATE, action) {
     switch(action.type) {
         case STORY_ARCHIVE: {
             return applyArchiveStory(state, action);
@@ -12,6 +12,5 @@ function archiveReducer(state=INITIAL_STATE, action) {
         default: return state;
     }
 }
-
 
 export default archiveReducer;
