@@ -41,7 +41,7 @@ button:hover {
 
 .button-inline {
   border-width: 0;
-  backgroun: transparent;
+  background: transparent;
   color: inherit;
   text-align: inherit;
   -webkit-font-smoothing: inherit;

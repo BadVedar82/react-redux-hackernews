@@ -18,6 +18,7 @@ const INITIAL_STATE = [
 ];
 
 function storyReducer(state = INITIAL_STATE, action) {
+    console.log('storyReducer');
     switch(action.type) {
         default: return state;
     }
