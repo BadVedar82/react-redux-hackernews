@@ -7,6 +7,8 @@ import { getReadableStories } from '../selectors/story';
 
 import Story from './Story';
 
+
+
 const COLUMNS = {
     title: {
         label: 'Title',
@@ -45,8 +47,7 @@ const Stories = ({ stories, onArchive }) =>
         <Story
           key={story.objectID}
           story={story}
-          columns={COLUMNS}
-          onArchive={onArchive}></Story>
+          columns={COLUMNS}></Story>
       )}
     </div>
 
@@ -56,6 +57,9 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   onArchive: id => dispatch(doArchiveStory(id)),
-})
+});
 
-export default connect(mapStateToProps, mapDispatchToProps)(Stories);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Stories);
